@@ -10,10 +10,12 @@ cd klatyn-truffle-starter
 npm install
 ```
 
-Create a .env file in the root folder and add your private key in the format shown below.
+Create a .env file in the root folder and add the necessary environment variables in the format shown below.
 
 ```
-PRIVATE_KEY='0x......'
+PRIVATE_KEY=
+BAOBAB_RPC_URL=
+CYPRESS_RPC_URL=
 ```
 
 To deploy the contracts to the Baobab testnet:
@@ -22,7 +24,7 @@ To deploy the contracts to the Baobab testnet:
 truffle deploy --network testnet
 ```
 
-To deploy the contracts to the Cypress mainnet:
+To deploy the contracts to Cypress mainnet:
 
 ```
 truffle deploy --network mainnet

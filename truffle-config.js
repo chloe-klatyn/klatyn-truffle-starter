@@ -12,17 +12,14 @@ module.exports = {
     },
     testnet: {
       provider: () =>
-        new HDWalletProvider(privateKey, "https://api.baobab.klaytn.net:8651/"),
+        new HDWalletProvider(privateKey, process.env.BAOBAB_RPC_URL),
       network_id: "1001", //Klaytn baobab testnet's network id
       gas: "8500000",
       gasPrice: null,
     },
     mainnet: {
       provider: () =>
-        new HDWalletProvider(
-          privateKey,
-          "https://public-node-api.klaytnapi.com/v1/cypress"
-        ),
+        new HDWalletProvider(privateKey, process.env.CYPRESS_RPC_URL),
       network_id: "8217", //Klaytn mainnet's network id
       gas: "8500000",
       gasPrice: null,
