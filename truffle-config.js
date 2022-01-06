@@ -1,7 +1,7 @@
+require("dotenv").config();
 const HDWalletProvider = require("truffle-hdwallet-provider-klaytn");
 
-const privateKey =
-  "0xbe07fa23b57b20a71eb58f0787c8e836cba6a34c920e5db93e5a3f8b4a1a0fb7"; // Enter your private key;
+const privateKey = process.env.PRIVATE_KEY; // Enter your private key;
 
 module.exports = {
   networks: {
